@@ -6,6 +6,9 @@ from sqlalchemy import create_engine
 from dotenv import load_dotenv
 import os
 
+# Load environment variables from .env
+load_dotenv()
+
 API_KEY = os.getenv("EXCHANGE_API_KEY")
 urlCurrencies = f"https://v6.exchangerate-api.com/v6/{API_KEY}/latest/EUR"
 response = requests.get(urlCurrencies)
@@ -31,8 +34,7 @@ df['date'] = datetime.now().strftime("%d.%m.%Y %H:%M:%S")
 
 print(df)
 
-# Load environment variables from .env
-load_dotenv()
+
 
 # Fetch variables
 USER = os.getenv("user")
