@@ -2,7 +2,7 @@ name: Update Exchange Rates Daily
 
 on:
   schedule:
-    - cron: '0 4 * * *' # Refresh at (03:00 UTC)
+    - cron: '0 4 * * *' # Refreh time
 
 jobs:
   update-rates:
