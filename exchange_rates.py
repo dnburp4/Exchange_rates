@@ -6,8 +6,8 @@ from sqlalchemy import create_engine
 from dotenv import load_dotenv
 import os
 
-#Man nimmt die Daten aus der Currences API
-urlCurrencies = "https://v6.exchangerate-api.com/v6/ff3618fa3b4dc517a676a20f/latest/EUR"
+API_KEY = os.getenv("EXCHANGE_API_KEY")
+urlCurrencies = f"https://v6.exchangerate-api.com/v6/{API_KEY}/latest/EUR"
 response = requests.get(urlCurrencies)
 
 print(response)

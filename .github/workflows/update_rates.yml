@@ -28,4 +28,5 @@ jobs:
           host: ${{ secrets.DB_HOST }}
           port: ${{ secrets.DB_PORT }}
           dbname: ${{ secrets.DB_NAME }}
+          EXCHANGE_API_KEY: ${{ secrets.EXCHANGE_API_KEY }}
         run: python exchange_rates.py
