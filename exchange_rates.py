@@ -30,7 +30,7 @@ df = pd.DataFrame(dataCurrencies['conversion_rates'].items(), columns=['currency
 
 # So fügst du Spalten hinzu:
 df['base_euro'] = dataCurrencies['base_code']
-df['date'] = datetime.now().strftime("%d.%m.%Y %H:%M:%S")
+df['date'] = datetime.now().replace(microsecond=0)
 
 print(df)
 
